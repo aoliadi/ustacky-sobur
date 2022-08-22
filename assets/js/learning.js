@@ -43,11 +43,11 @@ const AVAILABLE_GADGETS = [
 let CART_ARRAY = [];
 updateCartCount();
 CART_ICON.addEventListener("click", () => {
-  MODAL_CONTAINER.classList.toggle("hidden");
+  MODAL_CONTAINER.classList.toggle("hidden--table");
   formValidationProcess.addListeners();
 });
 CONTINUE_SHOPPING_BTN.addEventListener("click", () =>
-  MODAL_CONTAINER.classList.toggle("hidden")
+  MODAL_CONTAINER.classList.toggle("hidden--table")
 );
 CHECKOUT_BTN.addEventListener("click", (e) => {
   e.preventDefault();
@@ -98,7 +98,7 @@ const formValidationProcess = {
   addError: function (inputBox, errElem, errMssg) {
     this.setStatus(inputBox.name, false);
     errElem.textContent = errMssg;
-    errElem.classList.remove("hidden");
+    errElem.classList.remove("hidden--table");
     inputBox.classList.add("input--error");
     inputBox.parentElement.classList.add("label--error");
 
@@ -109,7 +109,7 @@ const formValidationProcess = {
     this.setStatus(inputBox.name, true);
     inputBox.classList.remove("input--error");
     inputBox.parentElement.classList.remove("label--error");
-    errElem.classList.add("hidden");
+    errElem.classList.add("hidden--table");
   },
 
   addListeners: function () {

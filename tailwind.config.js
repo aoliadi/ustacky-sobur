@@ -13,6 +13,7 @@ module.exports = {
         orangeRed: "#ff4500",
         orange: "#ffcd9e",
         newBlack: "#563434",
+        lightOrange: "#ff983d",
       },
     },
   },

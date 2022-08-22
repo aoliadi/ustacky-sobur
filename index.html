@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="bg-orange">
+    <header class="bg-orange">
         <nav class="flex container mx-auto p-6 justify-between items-center ">
             <article class="">
                 <img src="./assets/img/heroImage.png" alt="logo image" class="" width="75">
@@ -32,64 +32,23 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="capitalize font-medium text-newBlack hover:text-orangeRed">
+                    <a href="#about-us-section" class="capitalize font-medium text-newBlack hover:text-orangeRed">
                         about
                     </a>
                 </li>
             </ul>
             <article class="relative">
-                <img src="./assets/img/cart2.jpg" alt="" class="" width="50" height="50" id="cart-icon-js">
+                <img src="./assets/img/orange-cart.jpg" alt="" class="" width="50" height="50" id="cart-icon-js">
                 <span
                     class="p-1 w-6 h-6 grid justify-center content-center absolute top-[-8px] right-[-8px] rounded-full font-medium bg-orangeRed text-white"
                     id="gadgets_counter-js">
                 </span>
             </article>
         </nav>
-        <section class="modal__container hidden--table" id="modal__container-js">
-            <table class="invoice__container">
-                <thead>
-                    <tr>
-                        <th class="invoice__heading">S/N</th>
-                        <th class="invoice__heading">item</th>
-                        <th class="invoice__heading">price</th>
-                        <th class="invoice__heading">quantity</th>
-                        <th class="invoice__heading"></th>
-                    </tr>
-                </thead>
-                <tbody id="invoice_tbody-js"></tbody>
-            </table>
-            <article class="payable__container">
-                <h2 class="payable__heading">total amount to be paid</h2>
-                <span class="payable__amount" id="payable__amount-js">N/A</span>
-            </article>
-            <form class="form__container" id="form__container-js">
-                <label for="" class="label--normal">
-                    <input type="text" name="name" id="input--name--js" placeholder="Your name" class="input--normal"
-                        required>
-                    <span class="error-mssg hidden--table" id="error-name-js">empty</span>
-                </label>
-                <label for="" class="label--normal">
-                    <input type="email" name="mailAddress" id="input--email--js" placeholder="email address"
-                        class="input--normal" required>
-                    <span class="error-mssg hidden--table" id="error-email-js">empty</span>
-                </label>
-                <label for="" class="label--normal">
-                    <input type="tel" name="tel" id="input--tel--js" placeholder="Your telephone number"
-                        class="input--normal" required>
-                    <span class="error-mssg hidden--table" id="error-tel-js">empty</span>
-                </label>
-                <span class="btn btn--continue" id="btn--continue-js">
-                    continue shopping
-                </span>
-                <button type="submit" class="btn btn--checkout" id="btn--checkout-js" disabled>
-                    checkout
-                </button>
-            </form>
-        </section>
-        <main class="container mx-auto">
-            <section class="flex px-6">
-                <article class="flex-1 grid content-center">
-                    <h1 class="text-7xl text-newBlack font-extrabold capitalize">
+        <div class="container mx-auto">
+            <section class="flex flex-col md:flex-row px-6">
+                <article class="flex-1 mx-auto grid content-center">
+                    <h1 class="text-center md:text-left text-7xl max-w-[530px] text-newBlack font-extrabold capitalize">
                         the e-millenial store
                     </h1>
                 </article>
@@ -99,60 +58,117 @@
             </section>
             <section class="py-6  text-center">
                 <a href="#"
-                    class="capitalize inline-block py-3 w-[220px] font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack">
+                    class="capitalize inline-block py-3 mb-10 w-[220px] font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack">
                     shop
                 </a>
             </section>
-        </main>
-    </div>
+        </div>
+    </header>
+    <section class="modal__container hidden--table" id="modal__container-js">
+        <table class="invoice__container">
+            <thead>
+                <tr>
+                    <th class="invoice__heading">S/N</th>
+                    <th class="invoice__heading">item</th>
+                    <th class="invoice__heading">price</th>
+                    <th class="invoice__heading">quantity</th>
+                    <th class="invoice__heading"></th>
+                </tr>
+            </thead>
+            <tbody id="invoice_tbody-js"></tbody>
+        </table>
+        <article class="payable__container">
+            <h2 class="payable__heading">total amount to be paid</h2>
+            <span class="payable__amount" id="payable__amount-js">N/A</span>
+        </article>
+        <form class="form__container" id="form__container-js">
+            <label for="" class="label--normal">
+                <input type="text" name="name" id="input--name--js" placeholder="Your name" class="input--normal"
+                    required>
+                <span class="error-mssg hidden--table" id="error-name-js">empty</span>
+            </label>
+            <label for="" class="label--normal">
+                <input type="email" name="mailAddress" id="input--email--js" placeholder="email address"
+                    class="input--normal" required>
+                <span class="error-mssg hidden--table" id="error-email-js">empty</span>
+            </label>
+            <label for="" class="label--normal">
+                <input type="tel" name="tel" id="input--tel--js" placeholder="Your telephone number"
+                    class="input--normal" required>
+                <span class="error-mssg hidden--table" id="error-tel-js">empty</span>
+            </label>
+            <span class="btn btn--continue" id="btn--continue-js">
+                continue shopping
+            </span>
+            <button type="submit" class="btn btn--checkout" id="btn--checkout-js" disabled>
+                checkout
+            </button>
+        </form>
+    </section>
+    <main class="container mx-auto px-4 py-10">
+        <section class="flex flex-col md:flex-row gap-5">
+            <article id="about-us-section" class="w-full md:basis-1/4 border-r-2 border-gray-300">
+                <h2 class="uppercase text-3xl font-extrabold text-lightOrange">
+                    about us:
+                </h2>
+            </article>
+            <article class="">
+                <h2 class="text-2xl font-bold pb-4">
+                    Welcome to the <span class="uppercase">the e-millenial store</span>!
+                </h2>
+                <p class="leading-6 ">
+                    <span class="uppercase font-semibold">e-millenial store</span> is the leading retail company for
+                    affordable and durable mobile phones, computers, accessories, and various types of Electronics.
+                    <br>We consider it necessary to fill up this need in the global information technology sector with
+                    an emphasis on the Africa market. <br>As an indigenous company, established in 2020, we don’t just
+                    sell
+                    electronic gadgets, we provide first-class after-sales support that is comparable to the
+                    international market standards. <br>Over the years, we have been the first to announce and introduce
+                    new Brands, and services such as, Mobile Phone engineering service, phone screen insurance, phone
+                    trade-In, a Stolen Phone recovery app, and much more. <br> <span
+                        class="uppercase font-semibold">ustacky</span>
+                    Systems
+                    made a priceless contribution in providing personal computers (PCs) and their related services in
+                    the late 90s. <br> With the ability of our dynamic leadership in the retail sector, we have
+                    continuously provided excellent customer experience.
+                </p>
+            </article>
+        </section>
+    </main>
 
-    <!-- ------ABOUT SECTION----- -->
-    <!-- <section> -->
+    <!-- <div class="content_img col-xs-6 col-sm-3"> -->
+    <!-- <img src='https://unsplash.it/250' width='100%' height='100%'> -->
+    <!-- <div class="img-text">Image 1 Text</div> -->
+    <!-- </div> -->
 
-    <!-- <div class="about" id="aboout">
-        <h1>ABOUT US:</h1>
-        <br>
-        <p>Welcome to the E-MILLENIAL STORE!
-            <br><br>
+    <section class="container mx-auto">
+        <h2 class="w-full text-center py-10 uppercase text-3xl font-extrabold text-lightOrange">
+            our gadgets
+        </h2>
+        <ul class="flex gap-10 my-10">
+            <li class="text-center">
+                <div class="gadget-img__container">
+                    <img class="rounded img--gadget " src=" ./assets/img/product1.png">
+                    <div class="gadget--price rounded">price</div>
+                </div>
+                <p class="text-2xl font-bold py-2">iPhone</p>
+                <button
+                    class="w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack">
+                    add to cart
+                </button>
+            </li>
 
-            E-MILLENIAL STORE is the leading retail company for affordable and durable mobile phones, computers,
-            accessories, and various types of Electronics.
-
-            We consider it necessary to fill up this need in the global information technology sector with an
-            emphasis on the Africa market.
-
-            As an indigenous company, established in 2020, we don’t just sell electronic gadgets, we provide
-            first-class after-sales support that is comparable to the international market standards.
-
-            Over the years, we have been the first to announce and introduce new Brands, and services such as,
-            Mobile Phone engineering service, phone screen insurance, phone trade-In, a Stolen Phone recovery app,
-            and much more.
-
-            USTACKY Systems made a priceless contribution in providing personal computers (PCs) and their related
-            services in the late 90s.
-
-            With the ability of our dynamic leadership in the retail sector, we have continuously provided excellent
-            customer experience.
-
-
-
-
-        </p>
-
-    </div> -->
-
-    <!-- </section> -->
-
-    <!-- <section> -->
-    <!-- shop now -->
+        </ul>
+    </section>
     <!-- <div class="shop" id="shoop">
-            <H1>OUR GADGETS</H1>
-            <br>
-            <br>
-            <br>
-            <div class="row" id="gadgets_list_container-js">
-            </div>
-    </section> -->
+        <H1>OUR GADGETS</H1>
+        <br>
+        <br>
+        <br>
+        <div class="row" id="gadgets_list_container-js">
+            
+        </div>
+        </section> -->
 
     <!-- footer -->
     <!-- <div class="footer">

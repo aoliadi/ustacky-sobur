@@ -15,98 +15,97 @@
 </head>
 
 <body>
-
-    <section>
-        <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="cow2">
-                        <h1>THE E- MILLENIAL<br> STORE</h1>
-
-                    </div>
-                    <div class="cow2">
-                        <img src="./assets/img/heroImage.png" alt="" width="450px">
-
-                    </div>
-
-                    <div>
-                        <a href="#shoop" class="btn">SHOP NOW</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <nav class="flex container mx-auto p-6 justify-between items-center bg-orange">
-        <article class="">
-            <img src="./assets/img/heroImage.png" alt="logo image" class="" width="75">
-        </article>
-        <ul class="hidden md:flex items-center space-x-6">
-            <li class="">
-                <a href="#" class="capitalize hover:text-orangeRed hover:underline">
-                    intro
-                </a>
-            </li>
-            <li class="">
-                <a href="#" class="capitalize hover:text-orangeRed hover:underline">
+    <div class="bg-orange">
+        <nav class="flex container mx-auto p-6 justify-between items-center ">
+            <article class="">
+                <img src="./assets/img/heroImage.png" alt="logo image" class="" width="75">
+            </article>
+            <ul class="hidden md:flex items-center space-x-10">
+                <li class="">
+                    <a href="#" class="capitalize font-medium hover:text-orangeRed">
+                        intro
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="capitalize font-medium hover:text-orangeRed">
+                        shop
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#" class="capitalize font-medium hover:text-orangeRed">
+                        about
+                    </a>
+                </li>
+            </ul>
+            <article class="relative">
+                <img src="./assets/img/cart2.jpg" alt="" class="" width="50" height="50" id="cart-icon-js">
+                <span
+                    class="p-1 w-6 h-6 grid justify-center content-center absolute top-[-8px] right-[-8px] rounded-full font-medium bg-orangeRed text-white"
+                    id="gadgets_counter-js">
+                </span>
+            </article>
+        </nav>
+        <section class="modal__container hidden--table" id="modal__container-js">
+            <table class="invoice__container">
+                <thead>
+                    <tr>
+                        <th class="invoice__heading">S/N</th>
+                        <th class="invoice__heading">item</th>
+                        <th class="invoice__heading">price</th>
+                        <th class="invoice__heading">quantity</th>
+                        <th class="invoice__heading"></th>
+                    </tr>
+                </thead>
+                <tbody id="invoice_tbody-js"></tbody>
+            </table>
+            <article class="payable__container">
+                <h2 class="payable__heading">total amount to be paid</h2>
+                <span class="payable__amount" id="payable__amount-js">N/A</span>
+            </article>
+            <form class="form__container" id="form__container-js">
+                <label for="" class="label--normal">
+                    <input type="text" name="name" id="input--name--js" placeholder="Your name" class="input--normal"
+                        required>
+                    <span class="error-mssg hidden--table" id="error-name-js">empty</span>
+                </label>
+                <label for="" class="label--normal">
+                    <input type="email" name="mailAddress" id="input--email--js" placeholder="email address"
+                        class="input--normal" required>
+                    <span class="error-mssg hidden--table" id="error-email-js">empty</span>
+                </label>
+                <label for="" class="label--normal">
+                    <input type="tel" name="tel" id="input--tel--js" placeholder="Your telephone number"
+                        class="input--normal" required>
+                    <span class="error-mssg hidden--table" id="error-tel-js">empty</span>
+                </label>
+                <span class="btn btn--continue" id="btn--continue-js">
+                    continue shopping
+                </span>
+                <button type="submit" class="btn btn--checkout" id="btn--checkout-js" disabled>
+                    checkout
+                </button>
+            </form>
+        </section>
+        <main class="container mx-auto">
+            <section class="flex px-6">
+                <article class="flex-1 grid content-center">
+                    <h1 class="text-7xl font-extrabold capitalize">
+                        the e-millenial store
+                    </h1>
+                </article>
+                <article class="flex-1 ">
+                    <img src="./assets/img/heroImage.png" alt="" class="">
+                </article>
+            </section>
+            <section class="py-6  text-center">
+                <a href=""
+                    class="capitalize inline-block py-3 w-[220px] font-medium rounded-full border-2 border-[#ff9b3df5] bg-[#ff9b3df5] text-white hover:text-[#ff9b3df5] hover:bg-white">
                     shop
                 </a>
-            </li>
-            <li class="">
-                <a href="#" class="capitalize hover:text-orangeRed hover:underline">
-                    about
-                </a>
-            </li>
-        </ul>
-        <article class="relative">
-            <img src="./assets/img/cart2.jpg" alt="" class="" width="50" height="50" id="cart-icon-js">
-            <span
-                class="p-1 w-6 h-6 grid justify-center content-center absolute top-[-8px] right-[-8px] rounded-full font-medium bg-orangeRed text-white"
-                id="gadgets_counter-js">
-            </span>
-        </article>
-    </nav>
-    <section class="modal__container hidden--table" id="modal__container-js">
-        <table class="invoice__container">
-            <thead>
-                <tr>
-                    <th class="invoice__heading">S/N</th>
-                    <th class="invoice__heading">item</th>
-                    <th class="invoice__heading">price</th>
-                    <th class="invoice__heading">quantity</th>
-                    <th class="invoice__heading"></th>
-                </tr>
-            </thead>
-            <tbody id="invoice_tbody-js"></tbody>
-        </table>
-        <article class="payable__container">
-            <h2 class="payable__heading">total amount to be paid</h2>
-            <span class="payable__amount" id="payable__amount-js">N/A</span>
-        </article>
-        <form class="form__container" id="form__container-js">
-            <label for="" class="label--normal">
-                <input type="text" name="name" id="input--name--js" placeholder="Your name" class="input--normal"
-                    required>
-                <span class="error-mssg hidden--table" id="error-name-js">empty</span>
-            </label>
-            <label for="" class="label--normal">
-                <input type="email" name="mailAddress" id="input--email--js" placeholder="email address"
-                    class="input--normal" required>
-                <span class="error-mssg hidden--table" id="error-email-js">empty</span>
-            </label>
-            <label for="" class="label--normal">
-                <input type="tel" name="tel" id="input--tel--js" placeholder="Your telephone number"
-                    class="input--normal" required>
-                <span class="error-mssg hidden--table" id="error-tel-js">empty</span>
-            </label>
-            <span class="btn btn--continue" id="btn--continue-js">
-                continue shopping
-            </span>
-            <button type="submit" class="btn btn--checkout" id="btn--checkout-js" disabled>
-                checkout
-            </button>
-        </form>
-    </section>
+            </section>
+        </main>
+    </div>
+
     <!-- ------ABOUT SECTION----- -->
     <!-- <section> -->
 

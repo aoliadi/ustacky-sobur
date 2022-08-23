@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>E-MILLENIAL STORE</title>
+
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- <link rel="stylesheet" href="./assets/css/avalache.css"> -->
     <link rel="stylesheet" href="./assets/css/table.css">
     <link rel="stylesheet" href="./assets/css/form.css">
     <!-- <script defer src="https://js.paystack.co/v1/inline.js"></script> -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap" rel="stylesheet">
+
     <script defer src="./assets/js/learning.js"></script>
 </head>
 
@@ -52,10 +54,11 @@
                 </span>
             </article>
         </nav>
-        <div class="container mx-auto">
-            <section class="flex flex-col px-6 md:flex-row">
+        <div class="container my-5 mx-auto">
+            <section class="flex flex-col px-6 gap-5 md:gap-0 md:flex-row">
                 <article class="grid content-center flex-1 mx-auto">
-                    <h1 class="text-center md:text-left text-7xl max-w-[530px] text-newBlack font-extrabold capitalize">
+                    <h1
+                        class="text-center md:text-left text-5xl md:text-7xl max-w-[530px] text-newBlack font-extrabold capitalize">
                         the e-millenial store
                     </h1>
                 </article>
@@ -113,7 +116,7 @@
         </form>
     </section>
     <main class="container px-4 py-10 mx-auto">
-        <section class="flex flex-col gap-5 md:flex-row">
+        <section class="flex text-center lg:text-left flex-col gap-5 py-10 lg:flex-row">
             <article id="about-us-section" class="w-full border-r-2 border-gray-300 md:basis-1/3">
                 <h2 class="text-4xl font-extrabold uppercase text-lightOrange">
                     about us:
@@ -141,25 +144,16 @@
                 </p>
             </article>
         </section>
+        <section id="gadgets-section" class="container mx-auto">
+            <h2 class="w-full pt-10 text-4xl font-extrabold text-center uppercase text-lightOrange">
+                our gadgets
+            </h2>
+            <ul id="gadgets_list_container-js" class="flex flex-wrap justify-center gap-10 my-10"></ul>
+        </section>
     </main>
-
-    <section id="gadgets-section" class="container mx-auto">
-        <h2 class="w-full pt-10 text-4xl font-extrabold text-center uppercase text-lightOrange">
-            our gadgets
-        </h2>
-        <ul id="gadgets_list_container-js" class="flex flex-wrap justify-center gap-10 my-10"></ul>
-    </section>
-    <!-- footer -->
-    <!-- <div class="footer">
-        <div class="foot">
-            <p>DESIGNED AND CRAFTED BY A FRONTEND NINJA</p>
-            <p>Copyright &copy; 2022</p>
-        </div>
-        <div class="foot">
-            <img src="./assets/img/heroImage.png" width="100px">
-
-        </div>
-    </div> -->
+    <footer class="grid text-center font-medium place-items-center px-5 py-10 bg-orange">
+        <p class="uppercase">designed and crafted by a frontend ninja &copy; 2022</p>
+    </footer>
 </body>
 
 </html>

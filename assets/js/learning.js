@@ -299,16 +299,18 @@ function removeFromCart(gadget) {
 
 function changeBtnLabel(btn, action) {
   if (action === "add") {
-    btn.className = "btn";
+    btn.classList.remove("bg-disabled");
+    btn.classList.add("bg-lightOrange");
     btn.innerHTML = "add to cart";
     return;
   }
-  btn.className = "btn btn--remove";
+  btn.classList.add("bg-disabled");
+  btn.classList.remove("bg-lightOrange");
   btn.innerHTML = "remove from cart";
 }
 
 function isAlreadySelected(gadget) {
-  return CART_ARRAY.find((elem) => elem.id === gadget.id);
+  return CART_ARRAY.find((cartItem) => cartItem.id === gadget.id);
 }
 
 function handleAddToCartProcess(event, index) {
@@ -327,15 +329,24 @@ function handleAddToCartProcess(event, index) {
 }
 
 let gadgetList = AVAILABLE_GADGETS.map((item, index) => {
+  const thePrice = item.basePrice.toLocaleString("en-US", {
+    style: "currency",
+    currency: "NGN",
+  });
+
   return `
-  <div class="shop1">
-    <img src="./assets/img/product${item.id}.png">
-    <p>${item.name}</p>
-    <h3 id="p3">${item.price}</h3>
-    <div>
-    <button class="btn" onclick="handleAddToCartProcess(event, ${index})">add to cart</button>
-    </div>
-  </div>
+    <li class="text-center max-w-[300px]">
+        <div class="gadget-img__container">
+            <img class="rounded img--gadget" src="./assets/img/product${item.id}.png">
+            <div class="gadget--price rounded">${thePrice}</div>
+        </div>
+        <h3 class="text-2xl font-bold py-2">${item.name}</h3>
+        <button
+            onclick="handleAddToCartProcess(event, ${index})"
+            class="w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack">
+            add to cart
+        </button>
+    </li>
   `;
 }).join("");
 

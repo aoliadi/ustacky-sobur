@@ -11,28 +11,35 @@
     <link rel="stylesheet" href="./assets/css/table.css">
     <link rel="stylesheet" href="./assets/css/form.css">
     <!-- <script defer src="https://js.paystack.co/v1/inline.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap" rel="stylesheet">
     <script defer src="./assets/js/learning.js"></script>
 </head>
 
 <body>
     <header class="bg-orange">
-        <nav class="flex container mx-auto p-6 justify-between items-center ">
+        <nav class="container flex items-center justify-between p-6 mx-auto ">
             <article class="">
-                <img src="./assets/img/heroImage.png" alt="logo image" class="" width="75">
+                <a class="text-2xl font-extrabold text-newBlack">
+                    EMS
+                </a>
             </article>
-            <ul class="hidden md:flex items-center space-x-10">
+            <ul class="items-center hidden space-x-10 md:flex">
                 <li class="">
-                    <a href="#" class="capitalize font-medium text-newBlack hover:text-orangeRed">
+                    <a href="#" class="font-medium capitalize text-newBlack hover:text-orangeRed">
                         intro
                     </a>
                 </li>
                 <li class="">
-                    <a href="#" class="capitalize font-medium text-newBlack hover:text-orangeRed">
+                    <a href="#gadgets-section" class="font-medium capitalize text-newBlack hover:text-orangeRed">
                         shop
                     </a>
                 </li>
                 <li class="">
-                    <a href="#about-us-section" class="capitalize font-medium text-newBlack hover:text-orangeRed">
+                    <a href="#about-us-section" class="font-medium capitalize text-newBlack hover:text-orangeRed">
                         about
                     </a>
                 </li>
@@ -46,8 +53,8 @@
             </article>
         </nav>
         <div class="container mx-auto">
-            <section class="flex flex-col md:flex-row px-6">
-                <article class="flex-1 mx-auto grid content-center">
+            <section class="flex flex-col px-6 md:flex-row">
+                <article class="grid content-center flex-1 mx-auto">
                     <h1 class="text-center md:text-left text-7xl max-w-[530px] text-newBlack font-extrabold capitalize">
                         the e-millenial store
                     </h1>
@@ -56,8 +63,8 @@
                     <img src="./assets/img/heroImage.png" alt="" class="">
                 </article>
             </section>
-            <section class="py-6  text-center">
-                <a href="#"
+            <section class="py-6 text-center">
+                <a href="#gadgets-section"
                     class="capitalize inline-block py-3 mb-10 w-[220px] font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack">
                     shop
                 </a>
@@ -105,19 +112,19 @@
             </button>
         </form>
     </section>
-    <main class="container mx-auto px-4 py-10">
-        <section class="flex flex-col md:flex-row gap-5">
-            <article id="about-us-section" class="w-full md:basis-1/4 border-r-2 border-gray-300">
-                <h2 class="uppercase text-3xl font-extrabold text-lightOrange">
+    <main class="container px-4 py-10 mx-auto">
+        <section class="flex flex-col gap-5 md:flex-row">
+            <article id="about-us-section" class="w-full border-r-2 border-gray-300 md:basis-1/3">
+                <h2 class="text-4xl font-extrabold uppercase text-lightOrange">
                     about us:
                 </h2>
             </article>
             <article class="">
-                <h2 class="text-2xl font-bold pb-4">
+                <h2 class="pb-4 text-3xl font-bold">
                     Welcome to the <span class="uppercase">the e-millenial store</span>!
                 </h2>
                 <p class="leading-6 ">
-                    <span class="uppercase font-semibold">e-millenial store</span> is the leading retail company for
+                    <span class="font-semibold uppercase">e-millenial store</span> is the leading retail company for
                     affordable and durable mobile phones, computers, accessories, and various types of Electronics.
                     <br>We consider it necessary to fill up this need in the global information technology sector with
                     an emphasis on the Africa market. <br>As an indigenous company, established in 2020, we don’t just
@@ -126,7 +133,7 @@
                     international market standards. <br>Over the years, we have been the first to announce and introduce
                     new Brands, and services such as, Mobile Phone engineering service, phone screen insurance, phone
                     trade-In, a Stolen Phone recovery app, and much more. <br> <span
-                        class="uppercase font-semibold">ustacky</span>
+                        class="font-semibold uppercase">ustacky</span>
                     Systems
                     made a priceless contribution in providing personal computers (PCs) and their related services in
                     the late 90s. <br> With the ability of our dynamic leadership in the retail sector, we have
@@ -136,40 +143,12 @@
         </section>
     </main>
 
-    <!-- <div class="content_img col-xs-6 col-sm-3"> -->
-    <!-- <img src='https://unsplash.it/250' width='100%' height='100%'> -->
-    <!-- <div class="img-text">Image 1 Text</div> -->
-    <!-- </div> -->
-
-    <section class="container mx-auto">
-        <h2 class="w-full text-center py-10 uppercase text-3xl font-extrabold text-lightOrange">
+    <section id="gadgets-section" class="container mx-auto">
+        <h2 class="w-full pt-10 text-4xl font-extrabold text-center uppercase text-lightOrange">
             our gadgets
         </h2>
-        <ul class="flex gap-10 my-10">
-            <li class="text-center">
-                <div class="gadget-img__container">
-                    <img class="rounded img--gadget " src=" ./assets/img/product1.png">
-                    <div class="gadget--price rounded">price</div>
-                </div>
-                <p class="text-2xl font-bold py-2">iPhone</p>
-                <button
-                    class="w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack">
-                    add to cart
-                </button>
-            </li>
-
-        </ul>
+        <ul id="gadgets_list_container-js" class="flex flex-wrap justify-center gap-10 my-10"></ul>
     </section>
-    <!-- <div class="shop" id="shoop">
-        <H1>OUR GADGETS</H1>
-        <br>
-        <br>
-        <br>
-        <div class="row" id="gadgets_list_container-js">
-            
-        </div>
-        </section> -->
-
     <!-- footer -->
     <!-- <div class="footer">
         <div class="foot">

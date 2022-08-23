@@ -14,6 +14,7 @@ module.exports = {
         orange: "#ffcd9e",
         newBlack: "#563434",
         lightOrange: "#ff983d",
+        disabled: "#b5b5c2",
       },
     },
   },

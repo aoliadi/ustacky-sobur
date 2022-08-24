@@ -43,16 +43,14 @@ const AVAILABLE_GADGETS = [
 let CART_ARRAY = [];
 updateCartCount();
 CART_ICON.addEventListener("click", () => {
-  MODAL_CONTAINER.classList.toggle("hidden");
+  MODAL_CONTAINER.classList.toggle("hidden--table");
   formValidationProcess.addListeners();
 });
 CONTINUE_SHOPPING_BTN.addEventListener("click", () =>
-  MODAL_CONTAINER.classList.toggle("hidden")
+  MODAL_CONTAINER.classList.toggle("hidden--table")
 );
 CHECKOUT_BTN.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("clicked");
-  // getFormValues();
   payWithPaystack();
 });
 
@@ -98,7 +96,7 @@ const formValidationProcess = {
   addError: function (inputBox, errElem, errMssg) {
     this.setStatus(inputBox.name, false);
     errElem.textContent = errMssg;
-    errElem.classList.remove("hidden");
+    errElem.classList.remove("hidden--table");
     inputBox.classList.add("input--error");
     inputBox.parentElement.classList.add("label--error");
 
@@ -109,7 +107,7 @@ const formValidationProcess = {
     this.setStatus(inputBox.name, true);
     inputBox.classList.remove("input--error");
     inputBox.parentElement.classList.remove("label--error");
-    errElem.classList.add("hidden");
+    errElem.classList.add("hidden--table");
   },
 
   addListeners: function () {
@@ -182,7 +180,7 @@ const formValidationProcess = {
 function handleCounter(selectedItemId, action) {
   switch (action) {
     case "decrement":
-      CART_ARRAY = CART_ARRAY.map((item, index) => {
+      CART_ARRAY = CART_ARRAY.map((item) => {
         if (item.id === selectedItemId && item.quantity === 1) {
           alert(
             "You cannot have less than one item. If you wish to remove this item, click remove"
@@ -232,27 +230,23 @@ function createInvoice(cartArr) {
     .map((item, index) => {
       // ${(item.totalPrice ?? item.basePrice).toLocaleString("en-US")}
       return `
-    <tr>
-      <td>${index + 1}</td>
-      <td>${item.name}</td>
-      <td>
-        ${item.basePrice.toLocaleString("en-US")}
-
-      </td>
-      <td>
-          <button class="btn--counter" onclick="handleCounter(${
-            item.id
-          },'decrement')">-</button>
-          <span class="option_counter_val">${item.quantity}</span>
-          <button class="btn--counter" onclick="handleCounter(${
-            item.id
-          },'increment')">+</button>
-      </td>
-      <td><button class="btn invoice_btn--remove" onclick="handleCounter(${
-        item.id
-      },'remove')">remove</button></td>
-    </tr>
-    `;
+      <tr class="invoice_table_row--data">
+        <td></td>
+        <td>${item.name}</td>
+        <td>${item.basePrice.toLocaleString("en-US")}</td>
+        <td>
+            <button class="invoice_btn--counter" onclick="handleCounter(${
+              item.id
+            },'decrement')">-</button>
+            <span class="invoice_item_count-val">${item.quantity}</span>
+            <button class="invoice_btn--counter" onclick="handleCounter(${
+              item.id
+            },'increment')">+</button>
+        </td>
+        <td><button class="invoice_btn--remove"  onclick="handleCounter(${
+          item.id
+        },'remove')">remove</button></td>
+    </tr>`;
     })
     .join("");
 }
@@ -299,16 +293,18 @@ function removeFromCart(gadget) {
 
 function changeBtnLabel(btn, action) {
   if (action === "add") {
-    btn.className = "btn";
+    btn.classList.remove("bg-disabled");
+    btn.classList.add("bg-lightOrange");
     btn.innerHTML = "add to cart";
     return;
   }
-  btn.className = "btn btn--remove";
+  btn.classList.add("bg-disabled");
+  btn.classList.remove("bg-lightOrange");
   btn.innerHTML = "remove from cart";
 }
 
 function isAlreadySelected(gadget) {
-  return CART_ARRAY.find((elem) => elem.id === gadget.id);
+  return CART_ARRAY.find((cartItem) => cartItem.id === gadget.id);
 }
 
 function handleAddToCartProcess(event, index) {
@@ -327,15 +323,24 @@ function handleAddToCartProcess(event, index) {
 }
 
 let gadgetList = AVAILABLE_GADGETS.map((item, index) => {
+  const thePrice = item.basePrice.toLocaleString("en-US", {
+    style: "currency",
+    currency: "NGN",
+  });
+
   return `
-  <div class="shop1">
-    <img src="./assets/img/product${item.id}.png">
-    <p>${item.name}</p>
-    <h3 id="p3">${item.price}</h3>
-    <div>
-    <button class="btn" onclick="handleAddToCartProcess(event, ${index})">add to cart</button>
-    </div>
-  </div>
+    <li class="text-center max-w-[300px]">
+        <div class="gadget-img__container">
+            <img class="rounded img--gadget" src="./assets/img/product${item.id}.png">
+            <div class="gadget--price rounded">${thePrice}</div>
+        </div>
+        <h3 class="text-2xl font-bold py-2">${item.name}</h3>
+        <button
+            onclick="handleAddToCartProcess(event, ${index})"
+            class="w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack">
+            add to cart
+        </button>
+    </li>
   `;
 }).join("");
 

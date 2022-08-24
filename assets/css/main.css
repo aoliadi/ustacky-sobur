@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Fira Sans", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Source Serif Pro", serif;
+  }
+
+  .invoice_table_row--header > * {
+    @apply border-[1px] border-newBlack capitalize py-1.5 px-5;
+  }
+
+  .invoice_table_row--data > * {
+    @apply text-center capitalize py-1 border-[1px] border-newBlack border-collapse;
+  }
+
+  .invoice_btn--remove,
+  .btn--continue,
+  .btn--checkout {
+    @apply disabled:bg-disabled disabled:cursor-not-allowed cursor-pointer text-center inline-block capitalize my-1 py-2 px-8 font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack;
+  }
+
+  .btn--continue {
+    @apply mx-2;
+  }
+
+  .invoice_btn--counter {
+    @apply disabled:cursor-not-allowed cursor-pointer disabled:hover:border-none active:border-[#ff9b3df5] w-8 h-8 hover:border-newBlack hover:border-2;
+  }
+
+  .invoice_item_count-val {
+    @apply mx-2;
+  }
+
+  .invoice__container tr:nth-child(even) {
+    @apply bg-[#eee];
+  }
+
+  .invoice__container tr:nth-child(odd) {
+    @apply bg-[#fff];
+  }
+
+  .invoice__container tr:nth-child(even) .invoice_btn--counter {
+    @apply bg-[#fff];
+  }
+
+  .invoice__container tr:nth-child(odd) .invoice_btn--counter {
+    @apply bg-[#eee];
+  }
+
+  .gadget-img__container {
+    @apply relative mx-0 my-4;
+  }
+
+  .img--gadget {
+    @apply w-[300px] h-[300px] object-cover relative;
+  }
+
+  .gadget--price {
+    @apply absolute top-0 left-0 grid w-full text-white opacity-0 cursor-pointer place-items-center;
+
+    background: rgba(0, 0, 0, 0.65);
+    visibility: hidden;
+    -webkit-transition: visibility 0s ease-in-out, opacity 0.5s ease-in-out;
+    transition: visibility 0s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  .gadget-img__container:hover .gadget--price {
+    @apply visible h-full opacity-100;
+  }
+}

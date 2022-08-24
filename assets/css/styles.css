@@ -850,16 +850,12 @@ h1,
   max-width: 600px;
 }
 
-.max-w-\[750px\] {
-  max-width: 750px;
+.max-w-\[800px\] {
+  max-width: 800px;
 }
 
 .max-w-\[300px\] {
   max-width: 300px;
-}
-
-.max-w-\[800px\] {
-  max-width: 800px;
 }
 
 .flex-1 {
@@ -926,10 +922,6 @@ h1,
 
 .border-\[1px\] {
   border-width: 1px;
-}
-
-.border-2 {
-  border-width: 2px;
 }
 
 .border-r-2 {
@@ -1008,6 +1000,11 @@ h1,
   padding-bottom: 2rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -1016,11 +1013,6 @@ h1,
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pb-4 {

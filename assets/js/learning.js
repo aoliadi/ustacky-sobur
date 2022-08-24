@@ -51,8 +51,6 @@ CONTINUE_SHOPPING_BTN.addEventListener("click", () =>
 );
 CHECKOUT_BTN.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("clicked");
-  // getFormValues();
   payWithPaystack();
 });
 

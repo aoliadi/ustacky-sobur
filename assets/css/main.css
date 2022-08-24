@@ -23,12 +23,14 @@
     @apply text-center capitalize py-1 border-[1px] border-newBlack border-collapse;
   }
 
-  .invoice_btn--remove {
-    @apply capitalize py-2 px-8 font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack;
+  .invoice_btn--remove,
+  .btn--continue,
+  .btn--checkout {
+    @apply disabled:bg-disabled disabled:cursor-not-allowed cursor-pointer text-center inline-block capitalize mx-4 py-2 px-8 font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack;
   }
 
   .invoice_btn--counter {
-    @apply disabled:cursor-not-allowed disabled:hover:border-none active:border-[#ff9b3df5] w-8 h-8 hover:border-newBlack hover:border-2;
+    @apply disabled:cursor-not-allowed cursor-pointer disabled:hover:border-none active:border-[#ff9b3df5] w-8 h-8 hover:border-newBlack hover:border-2;
   }
 
   .invoice_item_count-val {

@@ -9,7 +9,6 @@
     <title>E-MILLENIAL STORE</title>
 
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <!-- <link rel="stylesheet" href="./assets/css/avalache.css"> -->
     <link rel="stylesheet" href="./assets/css/table.css">
     <link rel="stylesheet" href="./assets/css/form.css">
     <!-- <script defer src="https://js.paystack.co/v1/inline.js"></script> -->
@@ -75,7 +74,7 @@
         </div>
     </header>
     <main class="container px-4 py-10 mx-auto">
-        <section class="modal__container hidden--table" id="modal__container-js">
+        <section class="modal__container hidden--tabl" id="modal__container-js">
             <table
                 class="w-full border-[1px] border-newBlack border-collapse max-w-[600px] my-0 mx-auto invoice__container">
                 <thead>
@@ -117,10 +116,10 @@
                 </tbody>
             </table>
             <article class="text-center">
-                <h2 class="mb-4 text-4xl font-normal capitalize">total amount to be paid</h2>
+                <h2 class="mb-4 text-2xl font-normal capitalize">total amount to be paid</h2>
                 <span class="py-8 text-5xl" id="payable__amount-js">N/A</span>
             </article>
-            <form class="form__container" id="form__container-js">
+            <form class="w-full text-right" id="form__container-js">
                 <label for="" class="label--normal">
                     <input type="text" name="name" id="input--name--js" placeholder="Your name" class="input--normal"
                         required>
@@ -136,10 +135,10 @@
                         class="input--normal" required>
                     <span class="error-mssg hidden--table" id="error-tel-js">empty</span>
                 </label>
-                <span class="btn btn--continue" id="btn--continue-js">
+                <span class="my-4 btn--continue" id="btn--continue-js">
                     continue shopping
                 </span>
-                <button type="submit" class="btn btn--checkout" id="btn--checkout-js" disabled>
+                <button type="submit" class="my-4 btn--checkout" id="btn--checkout-js" disabled>
                     checkout
                 </button>
             </form>

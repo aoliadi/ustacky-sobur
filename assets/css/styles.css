@@ -441,29 +441,47 @@ h1,
   text-transform: capitalize;
 }
 
-.invoice_btn--remove {
+.invoice_btn--remove, 
+  .btn--continue, 
+  .btn--checkout {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+  cursor: pointer;
   border-radius: 9999px;
   background-color: #ff9b3df5;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  text-align: center;
   font-weight: 500;
   text-transform: capitalize;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.invoice_btn--remove:hover {
+.invoice_btn--remove:hover, 
+  .btn--continue:hover, 
+  .btn--checkout:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(86 52 52 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.invoice_btn--remove:disabled, 
+  .btn--continue:disabled, 
+  .btn--checkout:disabled {
+  cursor: not-allowed;
+  --tw-bg-opacity: 1;
+  background-color: rgb(181 181 194 / var(--tw-bg-opacity));
+}
+
 .invoice_btn--counter {
   height: 2rem;
   width: 2rem;
+  cursor: pointer;
 }
 
 .invoice_btn--counter:hover {
@@ -753,6 +771,11 @@ h1,
   margin-bottom: 0px;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -981,6 +1004,10 @@ h1,
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-2xl {

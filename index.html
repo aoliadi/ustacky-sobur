@@ -54,8 +54,8 @@
                 </span>
             </article>
         </nav>
-        <div class="container my-5 mx-auto">
-            <section class="flex flex-col px-6 gap-5 md:gap-0 md:flex-row">
+        <div class="container mx-auto my-5">
+            <section class="flex flex-col gap-5 px-6 md:gap-0 md:flex-row">
                 <article class="grid content-center flex-1 mx-auto">
                     <h1
                         class="text-center md:text-left text-5xl md:text-7xl max-w-[530px] text-newBlack font-extrabold capitalize">
@@ -76,21 +76,49 @@
     </header>
     <main class="container px-4 py-10 mx-auto">
         <section class="modal__container hidden--table" id="modal__container-js">
-            <table class="invoice__container">
+            <table
+                class="w-full border-[1px] border-newBlack border-collapse max-w-[600px] my-0 mx-auto invoice__container">
                 <thead>
-                    <tr>
-                        <th class="invoice__heading">S/N</th>
-                        <th class="invoice__heading">item</th>
-                        <th class="invoice__heading">price</th>
-                        <th class="invoice__heading">quantity</th>
-                        <th class="invoice__heading"></th>
+                    <tr class="invoice_table_row--header">
+                        <th>S/N</th>
+                        <th>item</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                        <th></th>
                     </tr>
                 </thead>
-                <tbody id="invoice_tbody-js"></tbody>
+                <tbody id="invoice_tbody-js">
+                    <tr class="invoice_table_row--data">
+                        <td></td>
+                        <td>Loading...</td>
+                        <td>
+                            Loading...
+                        </td>
+                        <td>
+                            <button disabled class="invoice_btn--counter" onclick="">-</button>
+                            <span class="invoice_item_count-val">5</span>
+                            <button class="invoice_btn--counter" onclick="">+</button>
+                        </td>
+                        <td><button class="invoice_btn--remove" onclick="">remove</button></td>
+                    </tr>
+                    <tr class="invoice_table_row--data">
+                        <td></td>
+                        <td>Loading...</td>
+                        <td>
+                            Loading...
+                        </td>
+                        <td>
+                            <button disabled class="invoice_btn--counter" onclick="">-</button>
+                            <span class="invoice_item_count-val">5</span>
+                            <button class="invoice_btn--counter" onclick="">+</button>
+                        </td>
+                        <td><button class="invoice_btn--remove" onclick="">remove</button></td>
+                    </tr>
+                </tbody>
             </table>
-            <article class="payable__container">
-                <h2 class="payable__heading">total amount to be paid</h2>
-                <span class="payable__amount" id="payable__amount-js">N/A</span>
+            <article class="text-center">
+                <h2 class="mb-4 text-4xl font-normal capitalize">total amount to be paid</h2>
+                <span class="py-8 text-5xl" id="payable__amount-js">N/A</span>
             </article>
             <form class="form__container" id="form__container-js">
                 <label for="" class="label--normal">
@@ -116,7 +144,7 @@
                 </button>
             </form>
         </section>
-        <section class="flex text-center lg:text-left flex-col gap-5 py-10 lg:flex-row">
+        <section class="flex flex-col gap-5 py-10 text-center lg:text-left lg:flex-row">
             <article id="about-us-section" class="w-full border-r-2 border-gray-300 md:basis-1/3">
                 <h2 class="text-4xl font-extrabold uppercase text-lightOrange">
                     about us:
@@ -152,9 +180,9 @@
                 <li class="text-center max-w-[300px]">
                     <div class="gadget-img__container">
                         <img class="rounded img--gadget" src="https://via.placeholder.com/300.webp?text=Loading...">
-                        <div class="gadget--price rounded">Loading...</div>
+                        <div class="rounded gadget--price">Loading...</div>
                     </div>
-                    <h3 class="text-2xl font-bold py-2">Loading...</h3>
+                    <h3 class="py-2 text-2xl font-bold">Loading...</h3>
                     <button
                         class="w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack">
                         add to cart
@@ -163,9 +191,9 @@
                 <li class="text-center max-w-[300px]">
                     <div class="gadget-img__container">
                         <img class="rounded img--gadget" src="https://via.placeholder.com/300.webp?text=Loading...">
-                        <div class="gadget--price rounded">Loading...</div>
+                        <div class="rounded gadget--price">Loading...</div>
                     </div>
-                    <h3 class="text-2xl font-bold py-2">Loading...</h3>
+                    <h3 class="py-2 text-2xl font-bold">Loading...</h3>
                     <button
                         class="w-[80%] uppercase font-medium py-2 my-2 rounded bg-disabled text-white hover:text-white hover:bg-newBlack">
                         remove from cart
@@ -174,7 +202,7 @@
             </ul>
         </section>
     </main>
-    <footer class="grid text-center font-medium place-items-center px-5 py-10 bg-orange">
+    <footer class="grid px-5 py-10 font-medium text-center place-items-center bg-orange">
         <p class="uppercase">&copy; designed and crafted by a frontend ninja, 2022</p>
     </footer>
 </body>

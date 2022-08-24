@@ -182,7 +182,7 @@ const formValidationProcess = {
 function handleCounter(selectedItemId, action) {
   switch (action) {
     case "decrement":
-      CART_ARRAY = CART_ARRAY.map((item, index) => {
+      CART_ARRAY = CART_ARRAY.map((item) => {
         if (item.id === selectedItemId && item.quantity === 1) {
           alert(
             "You cannot have less than one item. If you wish to remove this item, click remove"
@@ -232,27 +232,23 @@ function createInvoice(cartArr) {
     .map((item, index) => {
       // ${(item.totalPrice ?? item.basePrice).toLocaleString("en-US")}
       return `
-    <tr>
-      <td>${index + 1}</td>
-      <td>${item.name}</td>
-      <td>
-        ${item.basePrice.toLocaleString("en-US")}
-
-      </td>
-      <td>
-          <button class="btn--counter" onclick="handleCounter(${
-            item.id
-          },'decrement')">-</button>
-          <span class="option_counter_val">${item.quantity}</span>
-          <button class="btn--counter" onclick="handleCounter(${
-            item.id
-          },'increment')">+</button>
-      </td>
-      <td><button class="btn invoice_btn--remove" onclick="handleCounter(${
-        item.id
-      },'remove')">remove</button></td>
-    </tr>
-    `;
+      <tr class="invoice_table_row--data">
+        <td></td>
+        <td>${item.name}</td>
+        <td>${item.basePrice.toLocaleString("en-US")}</td>
+        <td>
+            <button class="invoice_btn--counter" onclick="handleCounter(${
+              item.id
+            },'decrement')">-</button>
+            <span class="invoice_item_count-val">${item.quantity}</span>
+            <button class="invoice_btn--counter" onclick="handleCounter(${
+              item.id
+            },'increment')">+</button>
+        </td>
+        <td><button class="invoice_btn--remove"  onclick="handleCounter(${
+          item.id
+        },'remove')">remove</button></td>
+    </tr>`;
     })
     .join("");
 }

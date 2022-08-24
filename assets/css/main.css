@@ -16,7 +16,7 @@
   }
 
   .invoice_table_row--header > * {
-    @apply border-[1px] border-newBlack capitalize p-1.5;
+    @apply border-[1px] border-newBlack capitalize py-1.5 px-5;
   }
 
   .invoice_table_row--data > * {
@@ -26,7 +26,11 @@
   .invoice_btn--remove,
   .btn--continue,
   .btn--checkout {
-    @apply disabled:bg-disabled disabled:cursor-not-allowed cursor-pointer text-center inline-block capitalize mx-4 py-2 px-8 font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack;
+    @apply disabled:bg-disabled disabled:cursor-not-allowed cursor-pointer text-center inline-block capitalize my-1 py-2 px-8 font-medium rounded-full bg-[#ff9b3df5] text-white hover:text-white hover:bg-newBlack;
+  }
+
+  .btn--continue {
+    @apply mx-2;
   }
 
   .invoice_btn--counter {

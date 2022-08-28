@@ -57,6 +57,18 @@
     @apply bg-[#eee];
   }
 
+  .gadget__list-item {
+    @apply text-center max-w-[300px];
+  }
+
+  .gadget__name {
+    @apply py-2 text-2xl font-bold;
+  }
+
+  .btn--add-to-cart {
+    @apply w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack;
+  }
+
   .gadget-img__container {
     @apply relative mx-0 my-4;
   }
@@ -66,7 +78,7 @@
   }
 
   .gadget--price {
-    @apply absolute top-0 left-0 grid w-full text-white opacity-0 cursor-pointer place-items-center;
+    @apply absolute top-0 left-0 grid w-full text-2xl font-bold text-white opacity-0 cursor-pointer place-items-center;
 
     background: rgba(0, 0, 0, 0.65);
     visibility: hidden;

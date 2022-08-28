@@ -329,15 +329,15 @@ let gadgetList = AVAILABLE_GADGETS.map((item, index) => {
   });
 
   return `
-    <li class="text-center max-w-[300px]">
+    <li class="gadget__list-item">
         <div class="gadget-img__container">
             <img class="rounded img--gadget" src="./assets/img/product${item.id}.png">
             <div class="gadget--price rounded">${thePrice}</div>
         </div>
-        <h3 class="text-2xl font-bold py-2">${item.name}</h3>
+        <h3 class="gadget__name">${item.name}</h3>
         <button
             onclick="handleAddToCartProcess(event, ${index})"
-            class="w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack">
+            class="btn--add-to-cart">
             add to cart
         </button>
     </li>

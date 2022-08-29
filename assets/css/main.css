@@ -67,6 +67,7 @@
 
   .btn--add-to-cart {
     @apply w-[70%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack transition-all duration-[0.3s] active:scale-90;
+    transition: 0.3s ease;
   }
 
   .gadget-img__container {
@@ -91,49 +92,64 @@
   }
 
   .btn--add-to-cart {
-    transition: all 0.5s ease-in;
   }
 
   .theCart {
     @apply w-[30px] absolute -left-8;
   }
 
-  .activated .theCart {
-    animation: anim--cart 1.5s ease-in forwards;
+  .theBox {
+    /* opacity: 0; */
+
+    @apply w-[20px] absolute left-[51%] -top-6 -translate-x-1/2;
+    /* @apply w-[20px] absolute left-[51%] top-[10%] -translate-x-1/2; */
   }
 
-  .theBox {
-    @apply w-[20px] absolute left-1/2 -top-6 -translate-x-1/2;
+  .activated .text-add {
+    visibility: hidden;
+    /* @apply hidden ; */
+  }
+
+  .activated .text--added {
+    /* display: none; */
+    /* @apply inline-block; */
+  }
+
+  .activated .theCart {
+    animation: anim--cart 0.75s ease-in-out forwards;
   }
 
   .activated .theBox {
-    animation: anim--box 0.5s ease-in forwards;
-    animation-delay: 0.3s;
+    animation: anim--box-1 0.00375s ease-out forwards 0.4125s,
+      anim--box-2 0.225s ease-in-out forwards 0.525s;
   }
 
   @keyframes anim--cart {
     0% {
     }
 
-    40%,
-    55% {
+    55%,
+    70% {
       left: 50%;
       transform: translateX(-50%);
     }
 
     100% {
       left: 100%;
-      /* right: -2rem; */
     }
   }
 
-  @keyframes anim--box {
-    0% {
+  @keyframes anim--box-2 {
+    to {
+      top: 10%;
+      left: 108%;
     }
+  }
 
-    100% {
-      top: 25%;
-      opacity: 0;
+  @keyframes anim--box-1 {
+    to {
+      top: 10%;
+      left: 51%;
     }
   }
 }

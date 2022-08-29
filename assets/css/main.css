@@ -66,7 +66,7 @@
   }
 
   .btn--add-to-cart {
-    @apply w-[80%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack;
+    @apply w-[70%] uppercase font-medium py-2 my-2 rounded bg-lightOrange text-white hover:text-white hover:bg-newBlack transition-all duration-[0.3s] active:scale-90;
   }
 
   .gadget-img__container {
@@ -88,5 +88,52 @@
 
   .gadget-img__container:hover .gadget--price {
     @apply visible h-full opacity-100;
+  }
+
+  .btn--add-to-cart {
+    transition: all 0.5s ease-in;
+  }
+
+  .theCart {
+    @apply w-[30px] absolute -left-8;
+  }
+
+  .activated .theCart {
+    animation: anim--cart 1.5s ease-in forwards;
+  }
+
+  .theBox {
+    @apply w-[20px] absolute left-1/2 -top-6 -translate-x-1/2;
+  }
+
+  .activated .theBox {
+    animation: anim--box 0.5s ease-in forwards;
+    animation-delay: 0.3s;
+  }
+
+  @keyframes anim--cart {
+    0% {
+    }
+
+    40%,
+    55% {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    100% {
+      left: 100%;
+      /* right: -2rem; */
+    }
+  }
+
+  @keyframes anim--box {
+    0% {
+    }
+
+    100% {
+      top: 25%;
+      opacity: 0;
+    }
   }
 }

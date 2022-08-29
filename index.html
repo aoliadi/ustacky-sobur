@@ -16,8 +16,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/22e579437d.js" crossorigin="anonymous"></script> -->
 
     <script defer src="./assets/js/learning.js"></script>
+    <script defer src="./assets/js/test.js"></script>
 </head>
 
 <body>
@@ -46,13 +48,12 @@
                 </li>
             </ul>
             <article class="relative">
-                <svg viewBox="0 0 576 512" id="cart-icon-js" class="cursor-pointer" width="30" height="30">
-                    <path
-                        d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"
-                        fill="#563434" />
-                </svg>
+                <!-- <i id="cart-icon-js" class="cursor-pointer fa-solid fa-cart-shopping fa-xl"></i> -->
+                <div class="p-[.8rem] rounded-full bg-lightOrange">
+                    <img src="./assets/img/cart.svg" alt="" id="cart-icon-js" class="w-[20px] text-white">
+                </div>
                 <span
-                    class="p-1 w-5 h-5 grid justify-center content-center absolute top-[-8px] right-[-8px] rounded-full font-medium bg-orangeRed text-white"
+                    class="p-3 w-5 h-5 justify-center content-center grid absolute top-[-5px] right-[-5px] rounded-full font-medium bg-lightOrange text-white"
                     id="gadgets_counter-js">
                 </span>
             </article>
@@ -119,7 +120,12 @@
                         <div class="rounded gadget--price">Loading...</div>
                     </div>
                     <h3 class="gadget__name">Loading...</h3>
-                    <button class="btn--add-to-cart">
+                    <!-- <i class="fa-solid fa-boxes-stacked"></i> -->
+                    <!-- <i class="fa-solid fa-cart-flatbed-boxes"></i> -->
+                    <button class="relative overflow-hidden btn--add-to-cart">
+
+                        <img src="./assets/img/cart.svg" alt="" class="theCart">
+                        <img src="./assets/img/box.svg" alt="" class="theBox ">
                         add to cart
                     </button>
                 </li>
